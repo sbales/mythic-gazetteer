@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<div class="container text-center"> 
+<div class="container text-center footer-margin"> 
     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/full-logo.png" class="img-responsive" />
     <?php if ( have_posts() ) : ?>
         <div class="col-sm-10 col-sm-offset-1">

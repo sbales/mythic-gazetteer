@@ -2000,3 +2000,18 @@ fieldset[disabled] .form-control
     border: 2px solid #A23739;
 }
 
+.footer-margin
+{
+    padding-bottom: 100px;
+}
+
+.blog-title
+{
+    text-transform: uppercase;
+}
+
+.single-blogpost
+{
+    text-align: left;
+}
+
