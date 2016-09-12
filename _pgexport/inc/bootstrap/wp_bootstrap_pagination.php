@@ -13,10 +13,10 @@ function wp_bootstrap_pagination( $args = array() ) {
     $defaults = array(
         'range'           => 4,
         'custom_query'    => FALSE,
-        'previous_string' => __( '<i class="glyphicon glyphicon-chevron-left"></i>', 'mythicgazetteer' ),
-        'next_string'     => __( '<i class="glyphicon glyphicon-chevron-right"></i>', 'mythicgazetteer' ),
-        'first_string'    => __( 'First', 'mythicgazetteer'),
-        'last_string'     => __( 'Last', 'mythicgazetteer'),
+        'previous_string' => __( '<i class="glyphicon glyphicon-chevron-left"></i>', 'mythic_gazetteer' ),
+        'next_string'     => __( '<i class="glyphicon glyphicon-chevron-right"></i>', 'mythic_gazetteer' ),
+        'first_string'    => __( 'First', 'mythic_gazetteer'),
+        'last_string'     => __( 'Last', 'mythic_gazetteer'),
         'before_output'   => '<nav class="post-nav"><ul class="pagination">',
         'after_output'    => '</ul></nav>'
     );
@@ -61,9 +61,9 @@ function wp_bootstrap_pagination( $args = array() ) {
 
     $firstpage = esc_attr( get_pagenum_link(1) );
     if ( $firstpage && (1 != $page || true) )
-        $echo .= '<li class="previous'.($page == 1 ? ' disabled' : '').'"><a href="' . $firstpage . '" aria-label="'.__( 'First', 'mythicgazetteer' ).'">' . $args['first_string'] . '</a></li>';
+        $echo .= '<li class="previous'.($page == 1 ? ' disabled' : '').'"><a href="' . $firstpage . '" aria-label="'.__( 'First', 'mythic_gazetteer' ).'">' . $args['first_string'] . '</a></li>';
     if ( $previous && (1 != $page || true) )
-        $echo .= '<li'.($page == 1 ? ' class="disabled"' : '').'><a href="' . $previous . '" title="' . __( 'previous', 'mythicgazetteer') . '" aria-label="' . __( 'previous', 'mythicgazetteer') . '">' . $args['previous_string'] . '</a></li>';
+        $echo .= '<li'.($page == 1 ? ' class="disabled"' : '').'><a href="' . $previous . '" title="' . __( 'previous', 'mythic_gazetteer') . '" aria-label="' . __( 'previous', 'mythic_gazetteer') . '">' . $args['previous_string'] . '</a></li>';
 
     if ( !empty($min) && !empty($max) ) {
         for( $i = $min; $i <= $max; $i++ ) {
@@ -79,11 +79,11 @@ function wp_bootstrap_pagination( $args = array() ) {
     $next = intval($page) + 1;
     $next = esc_attr( get_pagenum_link($next) );
     if ($next && ($count != $page || true) )
-        $echo .= '<li'.($page == $count ? ' class="disabled"' : '').'><a href="' . $next . '" title="' . __( 'next', 'mythicgazetteer') . '" aria-label="' . __( 'next', 'mythicgazetteer') . '">' . $args['next_string'] . '</a></li>';
+        $echo .= '<li'.($page == $count ? ' class="disabled"' : '').'><a href="' . $next . '" title="' . __( 'next', 'mythic_gazetteer') . '" aria-label="' . __( 'next', 'mythic_gazetteer') . '">' . $args['next_string'] . '</a></li>';
 
     $lastpage = esc_attr( get_pagenum_link($count) );
     if ( $lastpage ) {
-        $echo .= '<li class="next'.($page == $count ? ' disabled' : '').'"><a href="' . $lastpage . '" aria-label="' . __( 'Last', 'mythicgazetteer') . '">' . $args['last_string'] . '</a></li>';
+        $echo .= '<li class="next'.($page == $count ? ' disabled' : '').'"><a href="' . $lastpage . '" aria-label="' . __( 'Last', 'mythic_gazetteer') . '">' . $args['last_string'] . '</a></li>';
     }
     if ( isset($echo) )
         echo $args['before_output'] . $echo . $args['after_output'];

@@ -1662,7 +1662,7 @@ html
 
 body
 {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     font-size: 1em;
     line-height: 1.42857143;
     color: #3E321A;
@@ -1778,12 +1778,6 @@ hr
     font-size: 65%;
 }
 
-.h4,.h5,.h6,h4,h5,h6
-{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
 .h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small
 {
     font-size: 75%;
@@ -1804,19 +1798,9 @@ hr
     font-size: 18px;
 }
 
-.h5,h5
-{
-    font-size: 14px;
-}
-
 .h6,h6
 {
     font-size: 12px;
-}
-
-p
-{
-    margin: 0 0 10px;
 }
 
 .lead
@@ -5448,8 +5432,8 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 {
     .navbar-nav
     {
-        float: left;
-        margin: 0;
+        float: none;
+        margin: 0 auto;
     }
     .navbar-nav>li
     {
@@ -5626,10 +5610,6 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .navbar-default
 {
     border-color: #e7e7e7;
-    background-image: url('http://127.0.0.1:40000/file:///C:/xampp/htdocs/mythicgazetteer/wp-content/themes/mythicgazetteer/images/navbar-metal.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 .navbar-default .navbar-brand
