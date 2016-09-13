@@ -8,9 +8,9 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <div>
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/brand/top-left-page-corner.svg" class="top-page-corner" />
-                    <div class="post padding-equal page-parchment">
-                        <h2 class="page-title"><?php wp_title( ' ' ); ?></h2>
-                        <?php the_content(); ?>
+                    <div class="post padding-equal page-parchment"> 
+                        <h2 class="page-title"><?php wp_title( ' ' ); ?></h2> 
+                        <?php the_content(); ?> 
                     </div>
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/brand/bottom-right-page-corner.svg" class="pull-right bottom-page-corner" />
                 </div>
