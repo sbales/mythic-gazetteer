@@ -1,5 +1,5 @@
-<!doctype html>
-<html style="height:100%;" <?php language_attributes(); ?>>
+<!doctype html> 
+<html style="height:100%;" <?php language_attributes(); ?>> 
     <head content="S"> 
         <meta charset="<?php bloginfo( 'charset' ); ?>">          
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -24,8 +24,8 @@
         <meta name="author" content="Stevie Bales"> 
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
         <?php wp_head(); ?>
-    </head>
-    <body style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/Backgrounds/sky-tile.jpg');">
+    </head>     
+    <body style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/Backgrounds/sky-tile.jpg');"> 
         <header id="header-2" class="soft-scroll header-2"> 
             <nav class="main-nav navbar navbar-default navbar-fixed-bottom"> 
                 <div class="container navbar-container"> 
@@ -43,5 +43,5 @@
                 </div>                 
                 <!-- /.container-fluid -->                 
             </nav>             
-        </header>
+        </header>         
         <div class="content-block blog-1">

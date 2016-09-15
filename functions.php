@@ -131,7 +131,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
         'title' => __( 'Archive Feed', 'mythic_gazetteer' )
     ));
 
-    $wp_customize->add_section( 'blocks_copyright_1', array(
+    $wp_customize->add_section( 'footer_info_bottom', array(
         'title' => __( 'Footer', 'mythic_gazetteer' )
     ));
 
@@ -143,7 +143,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
         'label' => __( 'Facebook link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
@@ -154,7 +154,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
         'label' => __( 'Twitter link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
@@ -165,7 +165,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_google', array(
         'label' => __( 'Google+ link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
@@ -176,7 +187,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
         'label' => __( 'Behance link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
@@ -187,96 +198,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
         'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_1_text_right', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
         'type' => 'theme_mod',
-        'default' => 'Powered with Wordpress'
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
     ));
 
-    $wp_customize->add_control( 'blocks_copyright_1_text_right', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
         'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
-    ));
-
-    $wp_customize->add_section( 'blocks_header_2', array(
-        'title' => __( 'Header', 'mythic_gazetteer' )
-    ));
-
-    $wp_customize->add_section( 'blackwood-page', array(
-        'title' => __( 'Blackwood Page', 'mythic_gazetteer' )
-    ));
-
-    $wp_customize->add_section( 'blocks_copyright_1', array(
-        'title' => __( 'Footer', 'mythic_gazetteer' )
-    ));
-
-    $wp_customize->add_setting( 'blocks_footer_1_3_facebook', array(
-        'type' => 'theme_mod',
-        'default' => '#'
-    ));
-
-    $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
-        'label' => __( 'Facebook link', 'mythic_gazetteer' ),
-        'type' => 'text',
-        'section' => 'blocks_footer_1_3'
-    ));
-
-    $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
-        'type' => 'theme_mod',
-        'default' => '#'
-    ));
-
-    $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
-        'label' => __( 'Twitter link', 'mythic_gazetteer' ),
-        'type' => 'text',
-        'section' => 'blocks_footer_1_3'
-    ));
-
-    $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
-        'type' => 'theme_mod',
-        'default' => '#'
-    ));
-
-    $wp_customize->add_control( 'blocks_footer_1_3_google', array(
-        'label' => __( 'Google+ link', 'mythic_gazetteer' ),
-        'type' => 'text',
-        'section' => 'blocks_footer_1_3'
-    ));
-
-    $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
-        'type' => 'theme_mod',
-        'default' => '#'
-    ));
-
-    $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
-        'label' => __( 'Behance link', 'mythic_gazetteer' ),
-        'type' => 'text',
-        'section' => 'blocks_footer_1_3'
-    ));
-
-    $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
-        'type' => 'theme_mod',
-        'default' => '#'
-    ));
-
-    $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
-        'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
-        'type' => 'text',
-        'section' => 'blocks_footer_1_3'
-    ));
-
-    $wp_customize->add_setting( 'blocks_copyright_1_text_right', array(
-        'type' => 'theme_mod',
-        'default' => 'Powered with Wordpress'
-    ));
-
-    $wp_customize->add_control( 'blocks_copyright_1_text_right', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
-        'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_section( 'blocks_header_2', array(
@@ -287,7 +220,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
         'title' => __( 'Image Attachment Post', 'mythic_gazetteer' )
     ));
 
-    $wp_customize->add_section( 'blocks_copyright_1', array(
+    $wp_customize->add_section( 'footer_info_bottom', array(
         'title' => __( 'Footer', 'mythic_gazetteer' )
     ));
 
@@ -299,7 +232,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
         'label' => __( 'Facebook link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
@@ -310,7 +243,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
         'label' => __( 'Twitter link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
@@ -321,7 +254,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_google', array(
         'label' => __( 'Google+ link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
@@ -332,7 +276,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
         'label' => __( 'Behance link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
@@ -343,18 +287,107 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
         'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_1_text_right', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
         'type' => 'theme_mod',
-        'default' => 'Powered with Wordpress'
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
     ));
 
-    $wp_customize->add_control( 'blocks_copyright_1_text_right', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
         'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_section( 'blocks_header_2', array(
+        'title' => __( 'Header', 'mythic_gazetteer' )
+    ));
+
+    $wp_customize->add_section( 'blackwood-page', array(
+        'title' => __( 'Blackwood Page', 'mythic_gazetteer' )
+    ));
+
+    $wp_customize->add_section( 'footer_info_bottom', array(
+        'title' => __( 'Footer', 'mythic_gazetteer' )
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_facebook', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
+        'label' => __( 'Facebook link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
+        'label' => __( 'Twitter link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_google', array(
+        'label' => __( 'Google+ link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
+        'label' => __( 'Behance link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
+        'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
+        'type' => 'textarea',
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_section( 'blocks_header_2', array(
@@ -467,7 +500,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
         'section' => 'commision_services'
     ));
 
-    $wp_customize->add_section( 'blocks_copyright_1', array(
+    $wp_customize->add_section( 'footer_info_bottom', array(
         'title' => __( 'Footer', 'mythic_gazetteer' )
     ));
 
@@ -479,7 +512,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
         'label' => __( 'Facebook link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
@@ -490,7 +523,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
         'label' => __( 'Twitter link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
@@ -501,7 +534,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_google', array(
         'label' => __( 'Google+ link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
@@ -512,7 +556,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
         'label' => __( 'Behance link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
@@ -523,18 +567,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
         'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_1_text_right', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
         'type' => 'theme_mod',
-        'default' => 'Powered with Wordpress'
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
     ));
 
-    $wp_customize->add_control( 'blocks_copyright_1_text_right', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
         'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_section( 'header_navbar_menu', array(
@@ -549,67 +593,79 @@ function mythicgazetteer_customize_register( $wp_customize ) {
         'title' => __( 'Footer', 'mythic_gazetteer' )
     ));
 
-    $wp_customize->add_setting( 'footer_info_bottom_facebook', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_facebook', array(
         'type' => 'theme_mod',
         'default' => '#'
     ));
 
-    $wp_customize->add_control( 'footer_info_bottom_facebook', array(
+    $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
         'label' => __( 'Facebook link', 'mythic_gazetteer' ),
         'type' => 'text',
         'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'footer_info_bottom_twitter', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
         'type' => 'theme_mod',
         'default' => '#'
     ));
 
-    $wp_customize->add_control( 'footer_info_bottom_twitter', array(
+    $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
         'label' => __( 'Twitter link', 'mythic_gazetteer' ),
         'type' => 'text',
         'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'footer_info_bottom_google', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
         'type' => 'theme_mod',
         'default' => '#'
     ));
 
-    $wp_customize->add_control( 'footer_info_bottom_google', array(
+    $wp_customize->add_control( 'blocks_footer_1_3_google', array(
         'label' => __( 'Google+ link', 'mythic_gazetteer' ),
         'type' => 'text',
         'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'footer_info_bottom_behance', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
         'type' => 'theme_mod',
         'default' => '#'
     ));
 
-    $wp_customize->add_control( 'footer_info_bottom_behance', array(
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
         'label' => __( 'Behance link', 'mythic_gazetteer' ),
         'type' => 'text',
         'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'footer_info_bottom_dribble', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
         'type' => 'theme_mod',
         'default' => '#'
     ));
 
-    $wp_customize->add_control( 'footer_info_bottom_dribble', array(
+    $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
         'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
         'type' => 'text',
         'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'footer_info_bottom_wordpress-display', array(
-        'type' => 'theme_mod'
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
     ));
 
-    $wp_customize->add_control( 'footer_info_bottom_wordpress-display', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
         'type' => 'textarea',
         'section' => 'footer_info_bottom'
     ));
@@ -622,7 +678,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
         'title' => __( 'Page', 'mythic_gazetteer' )
     ));
 
-    $wp_customize->add_section( 'blocks_copyright_1', array(
+    $wp_customize->add_section( 'footer_info_bottom', array(
         'title' => __( 'Footer', 'mythic_gazetteer' )
     ));
 
@@ -634,7 +690,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
         'label' => __( 'Facebook link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
@@ -645,7 +701,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
         'label' => __( 'Twitter link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
@@ -656,7 +712,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_google', array(
         'label' => __( 'Google+ link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
@@ -667,7 +734,7 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
         'label' => __( 'Behance link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
@@ -678,18 +745,18 @@ function mythicgazetteer_customize_register( $wp_customize ) {
     $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
         'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
         'type' => 'text',
-        'section' => 'blocks_footer_1_3'
+        'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_1_text_right', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
         'type' => 'theme_mod',
-        'default' => 'Powered with Wordpress'
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
     ));
 
-    $wp_customize->add_control( 'blocks_copyright_1_text_right', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
         'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
+        'section' => 'footer_info_bottom'
     ));
 
     $wp_customize->add_section( 'blocks_header_2', array(
@@ -700,30 +767,85 @@ function mythicgazetteer_customize_register( $wp_customize ) {
         'title' => __( 'Single Post', 'mythic_gazetteer' )
     ));
 
-    $wp_customize->add_section( 'blocks_copyright_1', array(
+    $wp_customize->add_section( 'footer_info_bottom', array(
         'title' => __( 'Footer', 'mythic_gazetteer' )
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_1_text_left', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_facebook', array(
         'type' => 'theme_mod',
-        'default' => '© Stevie Bales.'
+        'default' => '#'
     ));
 
-    $wp_customize->add_control( 'blocks_copyright_1_text_left', array(
-        'label' => __( 'Left Text', 'mythic_gazetteer' ),
-        'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
+    $wp_customize->add_control( 'blocks_footer_1_3_facebook', array(
+        'label' => __( 'Facebook link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
     ));
 
-    $wp_customize->add_setting( 'blocks_copyright_1_text_right', array(
+    $wp_customize->add_setting( 'blocks_footer_1_3_twitter', array(
         'type' => 'theme_mod',
-        'default' => 'Proudly made with <i class="fa fa-heart pomegranate"></i> Wordpress'
+        'default' => '#'
     ));
 
-    $wp_customize->add_control( 'blocks_copyright_1_text_right', array(
-        'label' => __( 'Right text', 'mythic_gazetteer' ),
+    $wp_customize->add_control( 'blocks_footer_1_3_twitter', array(
+        'label' => __( 'Twitter link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_google', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_google', array(
+        'label' => __( 'Google+ link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_pinterest', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_pinterest', array(
+        'label' => __( 'Pinterest link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_behance', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_behance', array(
+        'label' => __( 'Behance link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_dribbble', array(
+        'type' => 'theme_mod',
+        'default' => '#'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_dribbble', array(
+        'label' => __( 'Dribbble link', 'mythic_gazetteer' ),
+        'type' => 'text',
+        'section' => 'footer_info_bottom'
+    ));
+
+    $wp_customize->add_setting( 'blocks_footer_1_3_title', array(
+        'type' => 'theme_mod',
+        'default' => 'Proudy Powered with <i class="fa fa fa-wordpress"></i> Wordpress!'
+    ));
+
+    $wp_customize->add_control( 'blocks_footer_1_3_title', array(
+        'label' => __( 'Right Side Text', 'mythic_gazetteer' ),
         'type' => 'textarea',
-        'section' => 'blocks_copyright_1'
+        'section' => 'footer_info_bottom'
     ));
 
     /* Pinegrow generated Customizer Controls End */

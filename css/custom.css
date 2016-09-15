@@ -357,6 +357,7 @@
 .footer-row {
     padding-left: 2%;
     padding-right: 2%;
+    padding-bottom: 5px;
     display: flex;   
     align-items: baseline;
     display: -webkit-flex; /* Safari */
@@ -386,6 +387,7 @@
     padding: 0px;
 }
 
+
 .image-slider
 {
     width: 100%;
@@ -403,5 +405,10 @@
     height: 300px;
     margin-left: -45px;
     margin-top: -280px;
+}
+
+.align-right
+{
+    text-align: right;
 }
 

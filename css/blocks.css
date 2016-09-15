@@ -4024,7 +4024,6 @@ Version: 1.0
     border: none;
 }
 
-
 .blog-1 .post img
 {
     margin: 0;
@@ -4419,5 +4418,11 @@ Version: 1.0
     color: #ffffff;
     font-weight: 700;
     margin: 0;
+}
+
+footer a
+{
+    text-align: left;
+    font-size: 120%;
 }
 
